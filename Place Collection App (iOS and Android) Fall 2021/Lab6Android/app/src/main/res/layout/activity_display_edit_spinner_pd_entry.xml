@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Display_Edit_Spinner_PD_Entry">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlacesSpinner"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/GDDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/GCDistance"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PlacesSpinner"/>
+
+            <TextView
+                android:id="@+id/GDDistanceDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/GDDistance"
+                app:layout_constraintTop_toBottomOf="@+id/PlacesSpinner"/>
+
+            <TextView
+                android:id="@+id/Bearing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/Bearing"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/GDDistance"/>
+
+            <TextView
+                android:id="@+id/BearingDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/Bearing"
+                app:layout_constraintTop_toBottomOf="@+id/GDDistanceDisplay"/>
+
+            <TextView
+                android:id="@+id/NameOfPlace"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/NameOfPlace"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Bearing"/>
+
+            <TextView
+                android:id="@+id/editTTNameOfPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/Blank"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/NameOfPlace"
+                app:layout_constraintTop_toBottomOf="@+id/BearingDisplay" />
+
+
+            <TextView
+                android:id="@+id/Description"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/Description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NameOfPlace" />
+
+            <EditText
+                android:id="@+id/editTTDescription"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:text="@string/Blank"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/Description"
+                app:layout_constraintTop_toBottomOf="@id/editTTNameOfPlace" />
+
+            <TextView
+                android:id="@+id/Category"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/Category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Description" />
+
+            <EditText
+                android:id="@+id/editTTCategory"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:text="@string/Blank"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/Category"
+                app:layout_constraintTop_toBottomOf="@id/editTTDescription" />
+
+            <TextView
+                android:id="@+id/AddressTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/AddressTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Category" />
+
+            <EditText
+                android:id="@+id/editTTAddressTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:text="@string/Blank"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/AddressTitle"
+                app:layout_constraintTop_toBottomOf="@id/editTTCategory" />
+
+            <TextView
+                android:id="@+id/AddressStreet"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="52dp"
+                android:text="@string/AddressStreet"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AddressTitle" />
+
+            <EditText
+                android:id="@+id/editTTAddressStreet"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:text="@string/Blank"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/AddressStreet"
+                app:layout_constraintTop_toBottomOf="@id/editTTAddressTitle" />
+
+            <TextView
+                android:id="@+id/Elevation"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="44dp"
+                android:text="@string/Elevation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AddressStreet" />
+
+            <EditText
+                android:id="@+id/editTTElevation"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/Elevation"
+                app:layout_constraintTop_toBottomOf="@id/editTTAddressStreet" />
+
+            <TextView
+                android:id="@+id/Latitude"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="52dp"
+                android:text="@string/Latitude"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Elevation" />
+
+            <EditText
+                android:id="@+id/editTTLatitude"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/Latitude"
+                app:layout_constraintTop_toBottomOf="@id/editTTElevation" />
+
+            <TextView
+                android:id="@+id/Longitude"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/Longitude"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Latitude" />
+
+            <EditText
+                android:id="@+id/editTTLongitude"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/Longitude"
+                app:layout_constraintTop_toBottomOf="@id/editTTLatitude" />
+
+
+            <Button
+                android:id="@+id/Save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:onClick="SaveData"
+                android:text="@string/Save"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/Longitude"
+                app:layout_constraintTop_toBottomOf="@id/Longitude">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/WarningMessage2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Save"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+LHE of assignment: h 
+{ , PLUS , 5}
+{z , ID , 5}
+{ , MULT , 5}
+{w , ID , 5}
+{f , ID , 5}
+LHE of assignment: t 
+{ , NOT , 6}
+{true , TRUE , 6}

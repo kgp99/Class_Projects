@@ -1,0 +1,55 @@
+Project 2 CSE340
+
+1. Lexical Specification:
+Same as Project 1, should be done first.
+Some keywords go in the keyword array.
+
+2. Calculate First and Forward of each non-terminal. Program is the same as S
+Make new class parser.h and parser.cc
+Should have a method parse_non-terminalname for each non-terminal
+A symbol table that will be described later.
+
+3.
+If var in global scope then: ::var
+if var in block scope then: blockname.var
+if var not found in any scope then: ?.var
+
+There are public scopes and private scopes. private only in that scope, public in blocks within it.
+
+Since a stmt_list can have another scope right after it then keep listing another stmt which is a scope or an assignment.
+Need to find a way to store statements after another scope. So could skip or figure out later. Seems hard right now to figure out without first and forward.
+Local var that gets passed to stmt_list then to stmt, no global vars.
+
+4. Show above in more examples based on public and private using static scope as in M3.
+
+5.
+If the input does not follow the grammar then print out(case matters):
+Syntax Error
+
+call syntaxerror() in parser.cc
+
+if the input does follow the grammar:
+Print out for each assignment.
+resolved_lhs = resolved_rhs
+
+global scope is special case in certain areas:
+  all vars are public
+  does not have assignments so no need to check rhs = rls
+
+print out rhs = rls for almost all scopes.
+symbol table can be it's own class or within parser.h / parser.cc or not needed at all as vector<block> blocksinp can just be a public var in parser.h:
+public:
+  vector<block> blocksinp;
+
+Block is a class within symbol table:
+public:
+  string bname;
+  vector<string> publicv;
+  vector<string> privatev;
+  vector<assignmentsib> aib;
+
+  assignmentsib is a class within symbol table:
+
+  public:
+    string rhs;
+    string lhs;

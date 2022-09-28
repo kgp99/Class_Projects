@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Lab6</string>
+
+    <string name="defaulturl">http://10.0.2.2:8080</string>
+
+    <string name="Place_Name">Place Name</string>
+
+    <string name="NameOfPlace">Name: </string>
+    <string name="Description">Description</string>
+    <string name="Category">Category</string>
+    <string name="AddressTitle">Address Title</string>
+
+    <string name="AddressStreet">AddressStreet</string>
+    <string name="City">City</string>
+    <string name="State">State</string>
+    <string name="Country">Country</string>
+    <string name="ZipCode">ZipCode</string>
+
+    <string name="Elevation">Elevation</string>
+    <string name="Latitude">Latitude</string>
+    <string name="Longitude">Longitude</string>
+
+    <string name="GCDistance">Great Circle Distance: </string>
+    <string name="Bearing">Bearing: </string>
+
+    <string name="Blank">Blank</string>
+
+    <string name="Get">Get</string>
+    <string name="Save">Save</string>
+    <string name="Clear">Clear</string>
+
+    <!-- Option Bar String values -->
+    <string name="action_add">Add</string>
+    <string name="action_remove">Remove</string>
+</resources>

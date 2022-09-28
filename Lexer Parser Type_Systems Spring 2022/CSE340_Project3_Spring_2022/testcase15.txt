@@ -1,0 +1,6 @@
+change to type: 1, idtochange: y
+x: int #
+y: int #
+z: int #
+r: ? #
+s, t: ? #
